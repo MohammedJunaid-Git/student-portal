@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Student Portal — Sign Up</title>
+  <title>Student Portal — Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,49 +11,55 @@
     <nav class="container">
       <a class="brand" href="index.html">Student Portal</a>
       <ul class="nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
         <li><a href="videos.html">Videos</a></li>
-        <li><a class="active" href="signup.html">Sign Up</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <h1>Create your account</h1>
-    <form id="signupForm" novalidate>
-      <div class="form-field">
-        <label for="name">Full Name</label>
-        <input id="name" name="name" type="text" required placeholder="Your name" />
-        <small class="error" data-error-for="name"></small>
-      </div>
+    <section>
+      <h1>Welcome to the Student Portal</h1>
+      <p>Explore coding topics, watch videos, and sign up for updates.</p>
+    </section>
 
-      <div class="form-field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required placeholder="you@example.com" />
-        <small class="error" data-error-for="email"></small>
+    <section>
+      <h2>Topics Covered</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Level</th>
+              <th>Resources</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML & CSS</td>
+              <td>Beginner</td>
+              <td><a href="videos.html#htmlcss">See Videos</a></td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>Beginner–Intermediate</td>
+              <td><a href="videos.html#javascript">See Videos</a></td>
+            </tr>
+            <tr>
+              <td>Python</td>
+              <td>Beginner</td>
+              <td><a href="videos.html#python">See Videos</a></td>
+            </tr>
+            <tr>
+              <td>Git</td>
+              <td>Beginner</td>
+              <td><a href="videos.html#git">See Videos</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <div class="form-field">
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" required minlength="6" placeholder="Min 6 characters" />
-        <small class="error" data-error-for="password"></small>
-      </div>
-
-      <div class="form-field">
-        <label for="track">Learning Track</label>
-        <select id="track" name="track" required>
-          <option value="">Select a track</option>
-          <option value="htmlcss">HTML & CSS</option>
-          <option value="javascript">JavaScript</option>
-          <option value="python">Python</option>
-          <option value="git">Git</option>
-        </select>
-        <small class="error" data-error-for="track"></small>
-      </div>
-
-      <button type="submit">Sign Up</button>
-      <p id="successMsg" class="success" role="status" aria-live="polite"></p>
-    </form>
+    </section>
   </main>
 
   <footer>
