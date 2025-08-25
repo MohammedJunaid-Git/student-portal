@@ -1,0 +1,46 @@
+:root {
+  --bg: #0b1020;
+  --card: #121836;
+  --text: #e8ebff;
+  --muted: #aab2d5;
+  --brand: #6aa2ff;
+  --accent: #9be37f;
+  --danger: #ff6b6b;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+
+header { background: #0b1028; border-bottom: 1px solid #1b2150; position: sticky; top: 0; z-index: 10; }
+.brand { color: var(--text); text-decoration: none; font-weight: 700; }
+.nav { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0; }
+.nav a { color: var(--muted); text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 6px; }
+.nav a:hover, .nav a.active { background: var(--card); color: var(--text); }
+
+section { background: var(--card); padding: 1rem; border-radius: 12px; margin: 1rem 0; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid #232a5b; }
+thead th { background: #0f1540; position: sticky; top: 0; }
+tbody tr:hover { background: #141b45; }
+
+.link-list { padding-left: 1rem; }
+.link-list a { color: var(--brand); }
+
+.video-grid { display: grid; gap: 1rem; margin-top: 0.5rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+iframe { width: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 10px; }
+
+form { background: var(--card); padding: 1rem; border-radius: 12px; }
+.form-field { margin-bottom: 1rem; display: grid; gap: 0.25rem; }
+label { font-weight: 600; }
+input, select, button { font: inherit; padding: 0.6rem 0.7rem; border-radius: 8px; border: 1px solid #2a3170; background: #0d1330; color: var(--text); }
+input:focus, select:focus { outline: 2px solid var(--brand); }
+button { background: var(--brand); color: #08102a; border: none; cursor: pointer; font-weight: 700; }
+button:hover { filter: brightness(1.05); }
+
+.error { color: var(--danger); min-height: 1em; }
+.success { color: var(--accent); font-weight: 600; margin-top: 0.75rem; }
+footer { border-top: 1px solid #1b2150; margin-top: 2rem; background: #0b1028; }
